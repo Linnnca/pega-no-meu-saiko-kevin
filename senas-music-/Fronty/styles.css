@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input {
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: calc(100% - 24px);
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #ff7e5f;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 126, 95, 0.7);
+}
+
+button {
+    background-color: #ff7e5f;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #feb47b;
+    transform: scale(1.05);
+}
+
+.signup-btn {
+    background-color: #3498db;
+}
+
+.signup-btn:hover {
+    background-color: #2980b9;
+}
+
+p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+}
+
+/* Musical notes background animation */
+@keyframes musicNotes {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100vh);
+    }
+}
+
+.music-note {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('music-note.png'); /* Substitua pela URL da imagem da nota musical */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: musicNotes 5s linear infinite;
+    opacity: 0.7;
+}
+
+.music-note:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.music-note:nth-child(2) {
+    left: 50%;
+    animation-delay: 1s;
+}
+
+.music-note:nth-child(3) {
+    left: 80%;
+    animation-delay: 2s;
+}
+
+.music-note:nth-child(4) {
+    left: 30%;
+    animation-delay: 3s;
+}
+
+.music-note:nth-child(5) {
+    left: 70%;
+    animation-delay: 4s;
+}
